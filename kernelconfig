@@ -1,6 +1,6 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# Linux/x86 4.9.13-gentoo Kernel Configuration
+# Linux/x86 4.9.14-gentoo Kernel Configuration
 #
 
 #
@@ -581,7 +581,7 @@ CONFIG_HOTPLUG_CPU=y
 CONFIG_LEGACY_VSYSCALL_EMULATE=y
 # CONFIG_LEGACY_VSYSCALL_NONE is not set
 CONFIG_CMDLINE_BOOL=y
-CONFIG_CMDLINE="root=PARTUUID=C3295323-F81F-43BB-95A4-F4A498332D57 init=/usr/lib/systemd/systemd ro systemd.legacy_systemd_cgroup_controller=yes"
+CONFIG_CMDLINE="root=PARTUUID=7beda494-17d6-416a-abc1-c78bdba4fd35 init=/usr/lib/systemd/systemd ro"
 # CONFIG_CMDLINE_OVERRIDE is not set
 CONFIG_MODIFY_LDT_SYSCALL=y
 CONFIG_HAVE_LIVEPATCH=y
