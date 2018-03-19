@@ -1,35 +1,28 @@
+Xft.dpi:                    96
+
 ! xterm setting
-xterm*termName:             xterm
-xterm*dpi:                  96
-xterm*geometry:             80x24
-xterm*autohint:             false
-xterm*hinting:              true
-xterm*hintstyle:            hintfull
-xterm*antialias:            true
-xterm*rgba:                 rbg
-xterm*lcdfilter:            lcddefault
-xterm*scrollBar:            false
-xterm*loginshell:           true
-xterm.cursorBlink:          true
-xterm*borderLess:           true
-xterm*cursorBlink:          true
-xterm*borderWidth:          0
-xterm*visualBell:           false
-xterm*marginBell:           false
+XTerm*termName:             xterm-256color
+XTerm*geometry:             120x30
+XTerm*scrollBar:            false
+XTerm*loginshell:           true
+XTerm.cursorBlink:          true
+XTerm*borderLess:           true
+XTerm*cursorBlink:          true
+XTerm*borderWidth:          0
 
-xterm*saveLines:            4096
-xterm*eightBitInput:        false
-xterm*altSendsEscape:       true
-xterm*metaSendsEscape:      true
+XTerm*saveLines:            4096
+XTerm*eightBitInput:        false
+XTerm*altSendsEscape:       true
+XTerm*metaSendsEscape:      true
 
-xterm*renderFont:           true
-xterm*locale:               true
-xterm*utf8:                 true
-xterm*utf8Title:            true
-xterm*faceName:             DejaVu Sans Mono
-xterm*faceNameDoublesize:   Source Han Sans CN
-xterm*faceSize:             11
-xterm*cjkWidth:             false
+XTerm*renderFont:           true
+XTerm*locale:               true
+XTerm*utf8:                 true
+XTerm*utf8Title:            true
+XTerm*faceName:             DejaVu Sans Mono:antialias=true
+XTerm*faceNameDoublesize:   Source Han Sans CN:antialias=false
+XTerm*faceSize:             11
+XTerm*cjkWidth:             false
 
 #include                    ".Xresources.d/monokai"
 !#include                   ".Xresources.d/solarized"
