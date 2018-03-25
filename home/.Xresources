@@ -1,5 +1,3 @@
-Xft.dpi:                    96
-
 ! xterm setting
 XTerm*termName:             xterm-256color
 XTerm*geometry:             120x30
@@ -21,7 +19,7 @@ XTerm*utf8:                 true
 XTerm*utf8Title:            true
 XTerm*faceName:             DejaVu Sans Mono:antialias=true
 XTerm*faceNameDoublesize:   Source Han Sans CN:antialias=false
-XTerm*faceSize:             11
+XTerm*faceSize:             12
 XTerm*cjkWidth:             false
 
 #include                    ".Xresources.d/monokai"
