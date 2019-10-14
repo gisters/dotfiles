@@ -14,18 +14,21 @@ autoload -U history-search-end
 bindkey "\e[A" history-beginning-search-backward
 bindkey "\e[B" history-beginning-search-forward
 
-autoload -U compinit promptinit colors
-compinit
-promptinit
-colors
-
 # need zsh-completions
 zstyle ':completion:*' rehash true
-zstyle ':completion:*' menu select
+zstyle ':completion:*:ssh:*' hosts on
+zstyle ':completion:*' menu select=2
 zstyle ':completion::complete:*' gain-privileges 1
+zstyle ":completion:*" auto-description "specify: %d"
+zstyle ":completion:*:default" list-colors ${(s.:.)LS_COLORS}
+zstyle ":completion:*" list-colors ""
+
+autoload -Uz compinit && compinit
+autoload -Uz promptinit && promptinit
+autoload -Uz colors && colors
 
 setopt COMPLETE_ALIASES
-setopt correctall
+#setopt correctall
 setopt extendedglob
 setopt hist_ignore_all_dups
 setopt hist_ignore_space
