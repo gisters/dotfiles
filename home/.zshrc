@@ -7,12 +7,17 @@ unsetopt LIST_BEEP
 
 # Search history with up and down key
 autoload -U history-search-end
-#zle -N history-beginning-search-backward-end history-search-end
-#zle -N history-beginning-search-forward-end history-search-end
-#bindkey "^[[A" history-beginning-search-backward-end
-#bindkey "^[[B" history-beginning-search-forward-end
+zle -N history-beginning-search-backward-end history-search-end
+zle -N history-beginning-search-forward-end history-search-end
+#bindkey "\e[A" history-beginning-search-backward-end
+#bindkey "\e[B" history-beginning-search-forward-end
 bindkey "\e[A" history-beginning-search-backward
 bindkey "\e[B" history-beginning-search-forward
+#autoload -Uz up-line-or-beginning-search down-line-or-beginning-search
+#zle -N up-line-or-beginning-search
+#zle -N down-line-or-beginning-search
+#[[ -n "${key[Up]}"   ]] && bindkey -- "${key[Up]}"   up-line-or-beginning-search
+#[[ -n "${key[Down]}" ]] && bindkey -- "${key[Down]}" down-line-or-beginning-search
 
 # need zsh-completions
 zstyle ':completion:*' rehash true
@@ -27,7 +32,8 @@ autoload -Uz compinit && compinit
 autoload -Uz promptinit && promptinit
 autoload -Uz colors && colors
 
-setopt COMPLETE_ALIASES
+#setopt COMPLETE_ALIASES
+setopt completealiases
 #setopt correctall
 setopt extendedglob
 setopt hist_ignore_all_dups
