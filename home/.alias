@@ -1,0 +1,32 @@
+#
+# ~/.bash_alias
+#
+
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias ssh='ssh -C'
+alias httping='httping -S -K -Y -s -Z -X'
+
+case `uname` in
+    Darwin)
+        alias dig='dig +nostats +nocomments +nocmd'
+        alias ls='ls -G'
+        alias ll='ls -lT'
+        alias netstat='netstat -an'
+        alias traceroute='traceroute -aI -q1'
+        alias history='history -i'
+        ;;
+    Linux)
+        alias dig='dig +nostats +nocomments +nocmd'
+        alias ll='ls -lh --time-style=long-iso'
+        alias ls='ls --color=auto --group-directories-first'
+        alias grep='grep --color=auto'
+        alias netstat='netstat -anp'
+        alias tracepath='tracepath -nb'
+        alias traceroute='traceroute -AI -q1'
+        alias less='less -R'
+        alias route='route -n'
+        alias ip='ip -h -c -s'
+        #alias ip='ip -h -c -f inet -f link -4 -6 -s'
+        ;;
+esac
