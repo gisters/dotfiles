@@ -9,15 +9,8 @@ unsetopt LIST_BEEP
 autoload -U history-search-end
 zle -N history-beginning-search-backward-end history-search-end
 zle -N history-beginning-search-forward-end history-search-end
-#bindkey "\e[A" history-beginning-search-backward-end
-#bindkey "\e[B" history-beginning-search-forward-end
-bindkey "\e[A" history-beginning-search-backward
-bindkey "\e[B" history-beginning-search-forward
-#autoload -Uz up-line-or-beginning-search down-line-or-beginning-search
-#zle -N up-line-or-beginning-search
-#zle -N down-line-or-beginning-search
-#[[ -n "${key[Up]}"   ]] && bindkey -- "${key[Up]}"   up-line-or-beginning-search
-#[[ -n "${key[Down]}" ]] && bindkey -- "${key[Down]}" down-line-or-beginning-search
+bindkey "\e[A" history-beginning-search-backward-end
+bindkey "\e[B" history-beginning-search-forward-end
 
 # need zsh-completions
 zstyle ':completion:*' rehash true
@@ -47,15 +40,16 @@ if [ -d $(xcode-select -p)/usr/share/git-core ]; then
     export GIT_PS1_SHOWDIRTYSTATE=1
     export GIT_PS1_SHOWSTASHSTATE=1
     export GIT_PS1_SHOWUNTRACKEDFILES=1
-    git_ps1() {
-        if command git branch >/dev/null 2>&1; then
-            __git_ps1;
-        fi
-    }
 fi
 
+git_ps1() {
+    if command git branch >/dev/null 2>&1; then
+        __git_ps1;
+    fi
+}
+
 # prompt
-export PS1='%8F%*%f %10F%m:%~%f%3F$(git_ps1)%f %10F\$%f '
+export PS1='%F{8}%*%f %F{2}%m:%~%f%F{3}$(git_ps1)%f %F{2}$%f '
 
 ttyctl -f
 
