@@ -1,0 +1,75 @@
+# rc file for mutt
+
+####################################
+# account
+####################################
+set from = 'username@gmail.com'
+set realname = 'Username'
+
+set imap_user = 'username@gmail.com'
+set imap_keepalive = '300'
+set imap_pass = 'password'
+set imap_passive = no
+
+set smtp_url = 'smtps://username@smtp.gmail.com:994'
+set smtp_pass = 'password'
+set imap_check_subscribed
+
+set folder = 'imaps://imap.gmail.com:993'
+mailboxes = '+INBOX'
+set spoolfile = '+INBOX'
+set postponed = '+[Gmail]/Drafts'
+set record = '+[Gmail]/Sent Mail'
+
+set mail_check = '120'
+
+
+####################################
+# bind map key function
+####################################
+bind pager <Up> previous-line
+bind pager <Down> next-line
+bind pager , half-up
+bind pager . half-down
+#bind editor <space> noop
+
+
+####################################
+# subscribe & lists
+####################################
+#subscribe list@mail.com
+#lists list@mail.com
+
+
+####################################
+# macro
+####################################
+macro index gi "<change-folder>=INBOX<enter>" "Go to inbox"
+macro index ga "<change-folder>=[Gmail]/All Mail<enter>" "Go to all mail"
+macro index gs "<change-folder>=[Gmail]/Sent Mail<enter>" "Go to Sent Mail"
+macro index gd "<change-folder>=[Gmail]/Drafts<enter>" "Go to drafts"
+macro index gt "<change-folder>=[Gmail]/Trash<enter>" "Go to drafts"
+#macro pager \cb |urlview\n
+#macro pager \cb <pipe-entry>'urlview'<enter> 'Follow links with urlview'
+macro pager \cb <pipe-entry>'w3m'<enter> 'Follow links in w3m'
+
+
+####################################
+# What to show and order of headers
+####################################
+ignore *
+unignore Date: Subject: From: To: Reply-To: Cc: \
+    Mail-Followup-To: User-Agent: X-Mailer: X-Operating-System: Message-ID:
+hdr_order Date: Subject: From: To: Reply-To: Cc: \
+    Mail-Followup-To: User-Agent: X-Mailer: X-Operating-System: Message-ID:
+
+
+####################################
+# source file
+####################################
+source ~/.mutt/other
+source ~/.mutt/folder
+source ~/.mutt/gpg.rc
+source ~/.mutt/color
+source ~/.mutt/auto-view
+
