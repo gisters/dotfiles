@@ -1,0 +1,10 @@
+!.gitkeep
+.DS_Store
+*~
+.tmp
+.uptimes.el
+elpa-*
+custom.el
+transient
+eshell
+viper
