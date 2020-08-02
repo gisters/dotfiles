@@ -11,7 +11,7 @@ endif
 call plug#begin('$HOME/.vim/plugged')
 Plug 'vim-scripts/Modeliner', {'tag': '0.3.0'}
 Plug 'ervandew/supertab', {'tag': '2.1'}
-Plug 'preservim/nerdtree', {'tag': '6.9.0'}
+Plug 'preservim/nerdtree', {'tag': '6.9.5'}
   Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tomasr/molokai'
 Plug 'aperezdc/vim-template'
@@ -38,6 +38,14 @@ try
 catch
     colorscheme default
 endtry
+
+" template
+if !empty(glob('~/.vim/plugged/vim-template'))
+    " let g:templates_plugin_loaded = 1
+    " let g:templates_no_autocmd = 1
+    let g:username = "Register"
+    let g:license = "GPLv3"
+endif
 
 " airline
 if !empty(glob('~/.vim/plugged/vim-airline'))
@@ -82,16 +90,22 @@ if !empty(glob('~/.vim/plugged/nerdtree'))
     let NERDTreeShowBookmarks = 1
     let NERDTreeShowFiles = 1
     let NERDTreeShowHidden = 1
-    " close vim if the only window left open is a NERDTree
+    " Close vim if the only window left open is a NERDTree
     autocmd BufEnter * if (winnr("$") == 1
                 \ && exists("b:NERDTree")
                 \ && b:NERDTree.isTabTree()) | q | endif
+    " If more than one window and previous buffer was NERDTree, go back to it.
     autocmd BufEnter * if bufname('#') =~# "^NERD_tree_"
                 \ && winnr('$') > 1 | b# | endif
-    " open a NERDTree when vim starts up if no files were specified
+    " Open a NERDTree automatically when no files were specified
     autocmd StdinReadPre * let s:std_in=1
-    autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-    " avoid crashes while the cursor is on the NERDTree window
+    autocmd VimEnter * if argc() == 0 && !exists("s:std_in") |
+                \ NERDTree | endif
+    " Open a NERDTree automatically when opening a directory
+    autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0])
+                \ && !exists("s:std_in") | exe 'NERDTree' argv()[0] |
+                \ wincmd p | ene | exe 'cd '.argv()[0] | endif
+    " Avoid crashes while the cursor is on the NERDTree window
     let g:plug_window = 'noautocmd vertical topleft new'
 endif
 
@@ -137,8 +151,5 @@ if !empty(glob('~/.vim/plugged/vim-go'))
     let g:go_fmt_fail_silently = 1
     let g:go_fmt_autosave = 0
 endif
-
-" Other config
-silent! so $HOME/.vim/vimrc.mine
 
 " vim: set et fenc=utf-8 ff=unix sts=4 sw=4 ts=4 :
