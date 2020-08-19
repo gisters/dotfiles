@@ -1,6 +1,15 @@
+! Xft
+Xft.dpi:                    96
+Xft.autohint:               false
+Xft.lcdfilter:              lcddefault
+Xft.hintstyle:              hintslight
+Xft.hinting:                true
+Xft.antialias:              true
+Xft.rgba:                   rgb
+
 ! xterm setting
 XTerm*termName:             xterm-256color
-XTerm*geometry:             120x30
+XTerm*geometry:             108x24
 XTerm*scrollBar:            false
 XTerm*loginshell:           true
 XTerm.cursorBlink:          true
@@ -12,14 +21,16 @@ XTerm*saveLines:            4096
 XTerm*eightBitInput:        false
 XTerm*altSendsEscape:       true
 XTerm*metaSendsEscape:      true
+Xterm*selectToClipboard:    true
 
 XTerm*renderFont:           true
 XTerm*locale:               true
 XTerm*utf8:                 true
 XTerm*utf8Title:            true
-XTerm*faceName:             DejaVu Sans Mono:antialias=true
-XTerm*faceNameDoublesize:   Source Han Sans CN:antialias=false
-XTerm*faceSize:             12
+XTerm*faceName:             monospace
+!XTerm*faceName:             DejaVu Sans Mono
+!XTerm*faceNameDoublesize:   Source Han Sans CN
+XTerm*faceSize:             10
 XTerm*cjkWidth:             false
 
 #include                    ".Xresources.d/monokai"

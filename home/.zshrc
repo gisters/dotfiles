@@ -49,7 +49,7 @@ git_ps1() {
 }
 
 # prompt
-export PS1='%F{8}%*%f %F{2}%m:%~%f%F{3}$(git_ps1)%f %F{2}$%f '
+export PS1='%F{3}%*%f %F{2}%m:%~%f%F{3}$(git_ps1)%f %F{2}$%f '
 
 ttyctl -f
 
