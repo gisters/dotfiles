@@ -40,7 +40,7 @@
 (when (eq system-type 'linux)
   (set-frame-font "DejaVu Sans Mono-12")
   (set-fontset-font "fontset-default"
-                    'unicode '("WenQuanYi Micro Hei" . "unicode-bmp")))
+                    'unicode '("Souce Han Sans CN" . "unicode-bmp")))
 
 (when (eq system-type 'darwin)
   (set-frame-font "Monaco-12")

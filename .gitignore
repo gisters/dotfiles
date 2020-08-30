@@ -3,7 +3,7 @@
 *~
 .tmp
 .uptimes.el
-elpa-*
+elpa*
 custom.el
 transient
 eshell
