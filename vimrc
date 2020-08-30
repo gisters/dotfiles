@@ -11,7 +11,7 @@ endif
 call plug#begin('$HOME/.vim/plugged')
 Plug 'vim-scripts/Modeliner', {'tag': '0.3.0'}
 Plug 'ervandew/supertab', {'tag': '2.1'}
-Plug 'preservim/nerdtree', {'tag': '6.9.5'}
+Plug 'preservim/nerdtree', {'tag': '6.9.9'}
   Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tomasr/molokai'
 Plug 'aperezdc/vim-template'
