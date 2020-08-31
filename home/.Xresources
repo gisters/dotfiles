@@ -1,40 +1,9 @@
-! Xft
-Xft.dpi:                    96
-Xft.autohint:               false
-Xft.lcdfilter:              lcddefault
-Xft.hintstyle:              hintslight
-Xft.hinting:                true
-Xft.antialias:              true
-Xft.rgba:                   rgb
-
-! xterm setting
-XTerm*termName:             xterm-256color
-XTerm*geometry:             108x24
-XTerm*scrollBar:            false
-XTerm*loginshell:           true
-XTerm.cursorBlink:          true
-XTerm*borderLess:           true
-XTerm*cursorBlink:          true
-XTerm*borderWidth:          0
-
-XTerm*saveLines:            4096
-XTerm*eightBitInput:        false
-XTerm*altSendsEscape:       true
-XTerm*metaSendsEscape:      true
-Xterm*selectToClipboard:    true
-
-XTerm*renderFont:           true
-XTerm*locale:               true
-XTerm*utf8:                 true
-XTerm*utf8Title:            true
-XTerm*faceName:             monospace
-!XTerm*faceName:             DejaVu Sans Mono
-!XTerm*faceNameDoublesize:   Source Han Sans CN
-XTerm*faceSize:             10
-XTerm*cjkWidth:             false
-
+! color theme
 #include                    ".Xresources.d/monokai"
 !#include                   ".Xresources.d/solarized"
 
-! emacs gui
-Emacs.geometry:             120x42+20+10
+! settings
+#include                    ".Xresources.d/xft"
+#include                    ".Xresources.d/xterm"
+#include                    ".Xresources.d/emacs"
+
