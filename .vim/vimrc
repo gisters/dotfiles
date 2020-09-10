@@ -39,6 +39,9 @@ catch
     colorscheme default
 endtry
 
+" Allow saving files as sudo
+cmap w!! w !sudo tee > /dev/null %
+
 " template
 if !empty(glob('~/.vim/plugged/vim-template'))
     " let g:templates_plugin_loaded = 1
