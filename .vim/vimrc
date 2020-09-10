@@ -23,7 +23,7 @@ Plug 'mhinz/vim-signify', {'tag': 'legacy'}
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'elzr/vim-json'
 Plug 'darfink/vim-plist'
-Plug 'hail2u/vim-css3-syntax', {'tag': 'v1.7.0'}
+Plug 'hail2u/vim-css3-syntax', {'tag': 'v1.7.2'}
 Plug 'plasticboy/vim-markdown'
 Plug 'pangloss/vim-javascript', {'tag': '1.2.5.1'}
 Plug 'hdima/python-syntax', {'tag': 'r3.5.0'}
