@@ -1,9 +1,0 @@
-! color theme
-#include                    ".Xresources.d/monokai"
-!#include                   ".Xresources.d/solarized"
-
-! settings
-#include                    ".Xresources.d/xft"
-#include                    ".Xresources.d/xterm"
-#include                    ".Xresources.d/emacs"
-
