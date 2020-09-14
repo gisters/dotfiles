@@ -1,1 +1,2 @@
-[[ -f ~/.Xresources ]] && /usr/bin/xrdb -merge -I$HOME ~/.Xresources
+[[ -f ~/.config/X11/xresources ]] \
+    && /usr/bin/xrdb -merge -I$HOME ~/.config/X11/xresources
