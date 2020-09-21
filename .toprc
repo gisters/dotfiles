@@ -1,8 +1,8 @@
 top's Config File (Linux processes with windows)
-Id:i, Mode_altscr=0, Mode_irixps=1, Delay_time=2.0, Curwin=0
-Def	fieldscur=¥¨³´;Ä·º@<=ÑO¹&*'-068>?ACFGÅML)+,./125BHIJKNPRSTUVWXYZ[\]^_`abcdefghij
-	winflags=163132, sortindx=0, maxtasks=0, graph_cpus=1, graph_mems=1
-	summclr=6, msgsclr=3, headclr=7, taskclr=6
+Id:i, Mode_altscr=0, Mode_irixps=1, Delay_time=3.0, Curwin=0
+Def	fieldscur=¥¨.³´;Ä·º@=ÑO¼¹&*'-068>?ACFGÅML)+,/125BHIJKNPRSTUVWXYZ[\]^_`abcdefghij
+	winflags=163644, sortindx=0, maxtasks=0, graph_cpus=1, graph_mems=1
+	summclr=4, msgsclr=4, headclr=7, taskclr=4
 Job	fieldscur=¥&*¨§­·º06¸>?@ACFG934Ä»¼½ÅML)+,./125BHIJKNOPQRSTUVWXYZ[\]^_`abcdefghij
 	winflags=163124, sortindx=18, maxtasks=0, graph_cpus=1, graph_mems=2
 	summclr=2, msgsclr=3, headclr=4, taskclr=6
