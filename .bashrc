@@ -6,6 +6,7 @@
 [[ -f ~/.bash_alias ]] && . ~/.bash_alias
 [[ -f /usr/bin/sudo ]] && complete -cf sudo
 [[ -f /usr/bin/man ]] && complete -cf man
+[[ -f ~/.dir_colors ]] && . ~/.dir_colors
 
 # PS
 OS=`uname`
