@@ -7,7 +7,10 @@
 
 # history
 export HISTTIMEFORMAT="%Y-%m-%d %T "
-export HISTCONTROL=ignoreboth:erasedups
+export HISTCONTROL="$HISTCONTROL ignoreboth:erasedups"
+export HISTSIZE=5000
+export HISTFILESIZE=10000
+shopt -s histappen
 
 # personal bash path
 [[ -d ~/.bash ]] && export PATH=$PATH:$HOME/.bash
