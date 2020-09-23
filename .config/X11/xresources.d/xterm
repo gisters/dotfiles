@@ -1,6 +1,6 @@
 ! xterm setting
 XTerm*termName:             xterm-256color
-XTerm*geometry:             98x24
+XTerm*geometry:             96x24+1200+630
 XTerm*scrollBar:            false
 XTerm*loginshell:           true
 XTerm*borderLess:           true
