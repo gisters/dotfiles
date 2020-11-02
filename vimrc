@@ -11,7 +11,7 @@ endif
 call plug#begin('$HOME/.vim/plugged')
 Plug 'vim-scripts/Modeliner', {'tag': '0.3.0'}
 Plug 'ervandew/supertab', {'tag': '2.1'}
-Plug 'preservim/nerdtree', {'tag': '6.9.9'}
+Plug 'preservim/nerdtree', {'tag': '6.9.10'}
   Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tomasr/molokai'
 Plug 'aperezdc/vim-template'
@@ -27,7 +27,7 @@ Plug 'hail2u/vim-css3-syntax', {'tag': 'v1.7.2'}
 Plug 'plasticboy/vim-markdown'
 Plug 'pangloss/vim-javascript', {'tag': '1.2.5.1'}
 Plug 'hdima/python-syntax', {'tag': 'r3.5.0'}
-Plug 'fatih/vim-go', {'tag': 'v1.24-rc.1'}
+Plug 'fatih/vim-go', {'tag': 'v1.24'}
 call plug#end()
 
 " colorscheme
@@ -35,12 +35,10 @@ try
     set t_Co=256
     colorscheme molokai
     let g:molokai_original = 1
+    hi  Visual  ctermbg=238
 catch
     colorscheme default
 endtry
-
-" Allow saving files as sudo
-cmap w!! w !sudo tee > /dev/null %
 
 " template
 if !empty(glob('~/.vim/plugged/vim-template'))
