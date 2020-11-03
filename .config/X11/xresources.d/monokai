@@ -4,7 +4,7 @@ xterm*background:   #262626
 xterm*foreground:   #F8F8F2
 xterm*highlight:    #66D9EF
 xterm*cursorColor:  #F8F8F2
-xterm*color0:       #555555
+xterm*color0:       #666666
 xterm*color1:       #F92672
 xterm*color2:       #A6E22E
 xterm*color3:       #F4BF75
