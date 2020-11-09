@@ -44,7 +44,6 @@ case $OS in
         [[ -f /usr/share/git-core/contrib/completion/git-prompt.sh ]] && . /usr/share/git-core/contrib/completion/git-prompt.sh
         [[ -f /usr/lib/git-core/git-sh-prompt ]] && . /usr/lib/git-core/git-sh-prompt
         [[ ${EUID} -ge "1000" ]] && PS
-        [[ -f /usr/bin/gpg ]] && export GPG_TTY=$(tty)
         ;;
 esac
 

@@ -4,6 +4,8 @@
 # runs your .bashrc and is recommended by the bash info pages.
 [[ -f ~/.bash_color ]] && . ~/.bash_color
 [[ -f ~/.bashrc ]] && . ~/.bashrc
+[[ -f /usr/bin/gpg ]] && export GPG_TTY=$(tty)
+[[ -n "$SSH_CONNECTION" ]] && export PINENTRY_USER_DATA="USE_CURSES=1"
 
 # history
 export HISTTIMEFORMAT="%Y-%m-%d %T "
