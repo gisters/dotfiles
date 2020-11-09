@@ -12,9 +12,6 @@ export HISTSIZE=5000
 export HISTFILESIZE=10000
 shopt -s histappen
 
-# personal bash path
-[[ -d ~/.bash ]] && export PATH=$PATH:$HOME/.bash
-
 case `uname` in
     Darwin)
         # git-completion

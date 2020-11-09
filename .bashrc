@@ -3,10 +3,12 @@
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
-[[ -f ~/.bash_alias ]] && . ~/.bash_alias
+[[ -f $HOME/.bash_alias ]] && . ~/.bash_alias
 [[ -f /usr/bin/sudo ]] && complete -cf sudo
 [[ -f /usr/bin/man ]] && complete -cf man
-[[ -f ~/.dir_colors ]] && . ~/.dir_colors
+[[ -f $HOME/.dir_colors ]] && . ~/.dir_colors
+[[ -d $HOME/.bash ]] && export PATH=$PATH:$HOME/.bash
+
 
 # PS
 OS=`uname`
