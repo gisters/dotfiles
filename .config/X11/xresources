@@ -1,7 +1,8 @@
 ! color theme
-#include                    "xresources.d/monokai"
-!#include                   "sresources.d/solarized"
-
+!#include                    "xresources.d/monokai"
+!#include                   "xresources.d/solarized"
+#include                   "xresources.d/lucario"
+#
 ! settings
 #include                    "xresources.d/xft"
 #include                    "xresources.d/xterm"
