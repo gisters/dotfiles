@@ -13,7 +13,6 @@ Plug 'vim-scripts/Modeliner', {'tag': '0.3.0'}
 Plug 'ervandew/supertab', {'tag': '2.1'}
 Plug 'preservim/nerdtree', {'tag': '6.9.10'}
   Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'tomasr/molokai'
 Plug 'aperezdc/vim-template'
 Plug 'vim-airline/vim-airline', {'tag': 'v0.11'}
 Plug 'godlygeek/tabular', {'tag': '1.0.0'}
@@ -32,10 +31,9 @@ call plug#end()
 
 " colorscheme
 try
-    set t_Co=256
-    colorscheme molokai
-    let g:molokai_original = 1
-    hi  Visual  ctermbg=238
+    colorscheme lucario
+    hi CursorLineNr ctermfg=NONE ctermbg=236 cterm=bold guifg=NONE guibg=#405160 gui=NONE
+    hi SpecialKey   ctermfg=NONE ctermbg=NONE cterm=NONE guifg=#61bbc8 guibg=NONE gui=NONE
 catch
     colorscheme default
 endtry
