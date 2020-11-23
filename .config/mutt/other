@@ -6,7 +6,7 @@ set ascii_chars = yes
 set assumed_charset = 'gb18030:utf-8:big5'
 set attach_charset = 'gb18030:utf-8:big5'
 set charset = 'UTF-8'
-set locale = 'zh_CN.UTF-8'
+#set locale = 'zh_CN.UTF-8'
 
 set index_format = '%4C %Z %{%m.%d.%G} %-15.15L (%?l?%4l&%4c?) %s %?M?(#%03M)&(%4l)?'
 set pager_context = '5'
@@ -25,4 +25,7 @@ set save_address = yes
 set reverse_alias = yes
 set use_ipv6 = no
 set pager_stop = yes
-set hostname = 'Havee'
+set hostname = 'x230'
+
+set sidebar_visible = yes
+bind index,pager B sidebar-toggle-visible
