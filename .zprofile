@@ -5,29 +5,24 @@ export LANG="en_US.UTF-8"
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"
 
-# zsh completions
-if type brew &>/dev/null; then
-  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
-  autoload -Uz compinit && compinit
-fi
-if type brew &>/dev/null; then
-  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
-  autoload -Uz compinit && compinit
-fi
-
 [[ -d ~/.bash ]] && path=($HOME/.bash $path)
 
 # HOMEBREW
-if [ -f /usr/local/bin/brew ]; then
+if [ -f /opt/homebrew/bin/brew ]; then
+    path=($path /opt/homebrew/bin /opt/homebrew/sbin)
+elif [ -f /usr/local/bin/brew ]; then
+    path=($path /usr/local/sbin)
+fi
+if hash brew 2>/dev/null; then
+    fpath=($(brew --prefix)/share/zsh/site-functions $fpath)
+    [[ -d $(brew --prefix)/share/zsh-completions ]] && fpath=($(brew --prefix)/share/zsh-completions $fpath)
+    export HOMEBREW_NO_ANALYTICS=1
+    export HOMEBREW_UPDATE_REPORT_ONLY_INSTALLED=1
     export HOMEBREW_GITHUB_API_TOKEN=your-github-api-token
     export HOMEBREW_EDITOR=/usr/bin/vim
-    export HOMEBREW_CACHE=$HOME/Library/Caches/Homebrew
-    export HOMEBREW_NO_ANALYTICS=1
-    path=($path $(brew --prefix)/sbin)
+    #export HOMEBREW_VERBOSE=1
+    export HOMEBREW_CASK_OPTS="--appdir=$HOME/Applications"
 fi
-
-# HOMEBREW CASK
-export HOMEBREW_CASK_OPTS="--appdir=$HOME/Applications"
 
 # golang
 if hash go 2>/dev/null; then
@@ -36,7 +31,7 @@ if hash go 2>/dev/null; then
 fi
 
 # gem home
-if [ -f /usr/bin/gem ]; then
+if hash gem 2>/dev/null; then
     export GEM_HOME=$HOME/.gem
     path=($GEM_HOME/bin $path)
 fi

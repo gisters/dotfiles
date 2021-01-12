@@ -33,7 +33,7 @@ setopt hist_ignore_all_dups
 setopt hist_ignore_space
 setopt sharehistory
 
-# git plugin
+# git plugin, require CommandLineTools or Xcode.app
 if [ -d $(xcode-select -p)/usr/share/git-core ]; then
     setopt promptsubst
     source $(xcode-select -p)/usr/share/git-core/git-prompt.sh
@@ -49,14 +49,14 @@ git_ps1() {
 }
 
 # prompt
-export PS1='%F{3}%*%f %F{2}%m:%~%f%F{3}$(git_ps1)%f %F{2}$%f '
+export PS1='%F{7}%*%f %F{6}%m:%~%f%F{2}$(git_ps1)%f %F{6}$%f '
 
 ttyctl -f
 
 [[ -f ~/.alias ]] && . ~/.alias
 
 run_ccal() {
-    if which ccal &> /dev/null; then
+    if hash ccal 2>/dev/null; then
         tty | grep -i -E 'tty|pts' &> /dev/null && ccal -u
     fi
 }
