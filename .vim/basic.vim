@@ -15,6 +15,12 @@ if &compatible
     set nocompatible
 endif
 
+" MacOS italic
+if has("macunix")
+    let &t_ZH="\e[3m"
+    let &t_ZR="\e[23m"
+endif
+
 " viminfo: remember certain things when we exit
 set viminfo=%50,\"100,'20,/20,:50,h,f1,n$HOME/.vim/.swap/viminfo
 "           |    |    |   |   |   | |  + viminfo file path
