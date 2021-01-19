@@ -6,7 +6,7 @@ if has("gui_running")
     set guioptions-=r   "remove right-hand scroll bar
     set guioptions-=L   "remove left-hand scroll bar
 
-    set lines=38 columns=118
+    set lines=38 columns=126
     autocmd VimEnter * set vb t_vb=
 
     set scrolloff=999
