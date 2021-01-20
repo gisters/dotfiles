@@ -20,9 +20,9 @@ PS() {
     # https://misc.flogisoft.com/bash/tip_colors_and_formatting
     if [[ $- == *i* ]]; then
         color1="\[$(tput setaf 7)\]"   # \e[32m
-        yellow="\[$(tput setaf 3)\]"
         color2="\[$(tput setaf 6)\]"
-        color3="\[$(tput setaf 5)\]"
+        color3="\[$(tput setaf 2)\]"
+        reset="\[$(tput sgr0)\]"
     fi
     git_ps1() {
         if hash __git_ps1 2>/dev/null; then
