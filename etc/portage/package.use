@@ -1,0 +1,37 @@
+app-admin/conky curl imlib iostats mpd thinkpad wifi
+app-admin/keepassxc autotype browser ccache keeshare
+app-crypt/gnupg user-socket
+app-editors/emacs xft
+app-emulation/qemu QEMU_SOFTMMU_TARGETS: x86_64 i386 QEMU_USER_TARGETS: x86_64 i386
+app-emulation/virtualbox qt5
+app-portage/eix sqlite
+app-portage/layman sqlite sync-plugin-portage
+app-text/poppler cjk
+dev-db/sqlite secure-delete
+dev-util/sccache dist-client dist-server
+gnome-base/gnome-extra-apps -share -shotwell
+gnome-base/gvfs afp archive cdda fuse gphoto2 mtp udisks
+gnome-base/nautilus sendto
+mail-client/mutt gnutls gpgme
+mail-client/thunderbird system-libvpx
+media-fonts/source-han-sans L10N: ja ko zh-CN zh-TW
+media-libs/libsdl2 haptic
+media-libs/libvpx postproc
+media-libs/mesa osmesa -vaapi
+media-sound/mpd libmpdclient
+media-video/mpv libmpv
+net-analyzer/mtr -gtk
+net-fs/samba winbind
+net-firewall/firewalld -gui
+net-firewall/nftables json python xtables
+net-misc/curl http2
+net-misc/rdesktop xrandr
+net-misc/spice-gtk usbredir
+sys-apps/systemd cgroup-hybrid
+sys-devel/gcc go graphite
+sys-libs/zlib minizip
+sys-devel/llvm gold
+virtual/linux-sources firmware
+www-client/firefox hwaccel system-libvpx
+www-client/w3m imlib
+x11-base/xorg-server kdrive glamor xvfb xephyr

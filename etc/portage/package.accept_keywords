@@ -1,0 +1,8 @@
+app-editors/vim -~amd64
+mail-client/thunderbird -~amd64
+mail-client/thunderbird-bin -~amd64
+net-im/telegram-desktop -~amd64
+sys-kernel/gentoo-sources -~amd64
+www-client/firefox -~amd64
+www-client/firefox-bin -~amd64
+x11-terms/xterm -~amd64

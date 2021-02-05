@@ -1,0 +1,11 @@
+app-admin/enpass SINEW-EULA
+app-office/wps-office WPS-EULA
+gnome-extra/nautilus-dropbox CC-BY-ND-3.0
+media-fonts/ttf-wps-fonts as-is
+media-fonts/wps-office-fonts as-is
+net-im/tencent-qq Tencent
+net-misc/dropbox CC-BY-ND-3.0 dropbox
+sys-kernel/linux-firmware linux-fw-redistributable no-source-code
+www-client/google-chrome google-chrome
+media-fonts/corefonts MSttfEULA
+app-misc/ccal GPL

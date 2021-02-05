@@ -1,0 +1,14 @@
+AcceptEnv LANG LC_*
+
+Protocol 2
+UsePAM yes
+UseDNS no
+HostKey /etc/ssh/ssh_host_ecdsa_key
+AddressFamily inet
+PermitRootLogin no
+SyslogFacility AUTHPRIV
+PasswordAuthentication no
+PubkeyAuthentication yes
+ChallengeResponseAuthentication no
+AllowUsers your-name
+Port your-port
