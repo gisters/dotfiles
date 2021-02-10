@@ -8,7 +8,7 @@ endif
 call plug#begin('$HOME/.vim/plugged')
 Plug 'vim-scripts/Modeliner', {'tag': '0.3.0'}
 Plug 'ervandew/supertab', {'tag': '2.1'}
-Plug 'preservim/nerdtree', {'tag': '6.9.12'}
+Plug 'preservim/nerdtree', {'tag': '6.10.5'}
   Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'aperezdc/vim-template'
 Plug 'vim-airline/vim-airline', {'tag': 'v0.11'}
@@ -25,17 +25,6 @@ Plug 'pangloss/vim-javascript', {'tag': '1.2.5.1'}
 Plug 'hdima/python-syntax', {'tag': 'r3.5.0'}
 Plug 'fatih/vim-go', {'tag': 'v1.24'}
 call plug#end()
-
-" colorscheme
-try
-    colorscheme lucario
-    hi CursorLineNr ctermfg=NONE ctermbg=236 cterm=bold guifg=NONE guibg=#405160 gui=NONE
-    hi SpecialKey   ctermfg=NONE ctermbg=NONE cterm=NONE guifg=#61bbc8 guibg=NONE gui=NONE
-    hi Comment      ctermfg=44 ctermbg=NONE cterm=italic guifg=#5c98cd guibg=NONE gui=italic
-    hi clear SignColumn
-catch
-    colorscheme default
-endtry
 
 " template
 if !empty(glob('~/.vim/plugged/vim-template'))

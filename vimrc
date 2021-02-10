@@ -1,8 +1,6 @@
 " Load basic config
 silent! so $HOME/.vim/basic.vim
 
-" Load plug.vim
-silent! so $HOME/.vim/plug.vim
 " or tiny.vim
 "silent! so $HOME/.vim/tiny.vim
 
