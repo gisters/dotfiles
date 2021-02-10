@@ -15,8 +15,8 @@ if &compatible
     set nocompatible
 endif
 
-" MacOS italic
-if has("macunix")
+" MacOS & Unix italic
+if has("macunix") || has("unix")
     let &t_ZH="\e[3m"
     let &t_ZR="\e[23m"
 endif
@@ -184,5 +184,11 @@ nnoremap \| :vsplit<cr>
 
 vnoremap s  :!sort<cr>
 vnoremap u  :!sort -u<cr>
+
+" Load color.vim
+silent! so $HOME/.vim/color.vim
+
+" Load plug.vim
+silent! so $HOME/.vim/extend-plug.vim
 
 " vim: set et fenc=utf-8 ff=unix sts=4 sw=4 ts=4 :
