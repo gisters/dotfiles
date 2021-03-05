@@ -1,14 +1,11 @@
 app-admin/conky
-app-admin/enpass
 app-admin/sudo
 app-editors/emacs
 app-editors/vim
 app-emulation/docker
+app-emulation/docker-compose
 app-emulation/qemu
 app-emulation/virtio-win
-app-emulation/virtualbox
-app-emulation/virtualbox-additions
-app-emulation/virtualbox-modules
 app-i18n/ibus-rime
 app-misc/screen
 app-office/wps-office
@@ -26,7 +23,6 @@ media-fonts/ttf-wps-fonts
 media-gfx/gimp
 media-gfx/imagemagick
 media-sound/alsa-utils
-media-sound/easytag
 media-sound/mpc
 media-sound/mpd
 media-video/mpv
@@ -35,6 +31,7 @@ net-dns/bind-tools
 net-firewall/firewalld
 net-ftp/lftp
 net-im/tencent-qq
+net-misc/iperf
 net-misc/rdesktop
 net-misc/whois
 sys-apps/pciutils
